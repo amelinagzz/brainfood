@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Results" customModule="BrainTeaser" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tMs-XR-Nef">
+                    <rect key="frame" x="200" y="150" width="200" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time's up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kv-BO-6wf">
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="LtD-ix-xkm"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69q-Ie-T4n">
+                            <rect key="frame" x="0.0" y="60" width="200" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="PWf-Z7-pwh"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Errors:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWB-lM-PNE">
+                            <rect key="frame" x="0.0" y="120" width="200" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="7hk-w6-AQe"/>
+                                <constraint firstAttribute="height" constant="60" id="FzT-fC-ta6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total cards:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1x-hc-htQ">
+                            <rect key="frame" x="0.0" y="180" width="200" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="WIw-pk-Wq2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m39-3P-4sy">
+                            <rect key="frame" x="0.0" y="240" width="200" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="vyM-38-Dea"/>
+                            </constraints>
+                            <state key="normal" title="Restart"/>
+                            <connections>
+                                <action selector="restartBtnPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="QIZ-O0-297"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="tMs-XR-Nef" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="618-BS-Qyw"/>
+                <constraint firstItem="tMs-XR-Nef" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="qOy-VS-lKe"/>
+            </constraints>
+            <connections>
+                <outlet property="lblCorrect" destination="69q-Ie-T4n" id="nTa-EG-8WL"/>
+                <outlet property="lblError" destination="eWB-lM-PNE" id="Z0D-Z9-Tnh"/>
+                <outlet property="lblTotal" destination="P1x-hc-htQ" id="t0C-jw-qqr"/>
+            </connections>
+        </view>
+    </objects>
+</document>
